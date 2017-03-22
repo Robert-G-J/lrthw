@@ -1,0 +1,11 @@
+Study Drills 18
+
+Function Checklist
+-start with def, finish with end
+-use only characters and underscore in
+naming it
+- use parentheses for arguments
+
+Running, calling or using a function (i.e. method)
+is all the same thing. They're verbs we call on
+an object

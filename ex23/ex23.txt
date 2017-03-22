@@ -1,0 +1,8 @@
+
+Check out the repo:
+https://github.com/Homebrew/homebrew-core/blob/master/Formula/lemon.rb
+
+Which I believe is the Homebrew package manager
+
+It called a LOT of other languages. Definitely
+noticed some javascript in there

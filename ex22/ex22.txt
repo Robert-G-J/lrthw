@@ -1,0 +1,37 @@
+mathematical operators +,-,*,**,/,%
+
+variable = an object that can be set to file, string, integer, float, boolean,..
+Integer/float variables can take mathematical operations by name, e.g.
+my_age * my_height = .....
+
+function/method
+A small script that takes 0-n arguments and can return some result. When defining, could use def print_two (*args);end to set multiple arguments within the method
+
+ARGV
+An array of variables that are initialised for calling from the command line
+
+File.open, .read, .close, .seek(), .write, .truncate(n)
+Methods belonging to the IO class that work on files.
+
+FORMATTING
+String interpolation #{} interrupts a string and calls in a variable as an argument
+
+%{} is a formatting consensus for string format. E.g. %{drink} could be called in a string with %{drink: "ale"}, where 'drink' would be replaced with 'ale'.
+
+String can be printed to stdout with integers: e.g. print "OUCH!"*10
+SEE EXERCISE 08
+
+IO
+stdin, stdout and stderr are the three channels by which the computer communicates.
+IO calls are useful when we set command line variables
+
+.gets is used to pull a response from stdin
+.chomp cuts of the trailing line break from an input.
+
+ESCAPE CHARACTERS
+Used to allow special characters in a string or a regular expression (regex).
+See my cheatsheet.
+
+INTEGER
+Methods that act on numbers, such as:
+.to_i, to_f,
