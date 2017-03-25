@@ -24,10 +24,10 @@ end
 def dungeon_room
   puts "\nThis bedroom gives you the creeps. It has a single door and various stuffed toys, with a lingering smell of cheap perfume or aftershave. It's hard to tell."
   puts "\nWhat do you wish to do? \n1/. Stay in bed?\n2/. Pull on your clothes and silently try the door?"
-  puts "> "
+  
 #this while loop infinitely forces you to the start unless you enter either a 1 or 2
   while true
-  	puts "> "
+  	print "> "
   	choice  = $stdin.gets.chomp
 	
 	  if choice == "1"
@@ -51,6 +51,8 @@ def corridor
 	
 	puts "\nYou're on a corridor, that stretches off to both your left and right, turning a corner at both ends. There are no other doors, just a lot of disconcerting 70s artwork on brown wall-paper. The smell of lavender is everywhere."
 	puts "\nDo you turn left or right?"
+	print "> "
+
 	choice = $stdin.gets.chomp
 
 	if choice.downcase == "left"
@@ -78,6 +80,7 @@ def stairs_into_custard
 	puts "You can't tell how deep it is, but it's thick and opaque and fills the entire stairwell like a flooded boat-house. "
 	puts "If there is an exit, it's under-custard."
 	puts "What do you want to do?"
+	print "> "
 
 	
 		
@@ -100,6 +103,7 @@ def custard_to_jungle
 	puts "\nYou swim like there's no tomorrow, blind in the tasty yellow sludge."
 	puts "Starting to run out of air you panic."
 	puts "Do you turn back, or risk it and push on?"
+	print "> "
 	
 		
 		while true
@@ -110,13 +114,13 @@ def custard_to_jungle
 				puts "Continue or go back?"
 				decision = $stdin.gets.chomp
 						
-						if decision =~ /continue|keep|keep going|push/
-							puts "\nThe risk pays off and you suddenly break the surface of the custard, gasping for air"
+						if decision =~ /continue|keep|keep going|push|swim/
+							puts "\nThe risk pays off and you suddenly break the surface of the custard, gasping for air. "
 							jungle
 						elsif decision =~ /go|back|give up/
-							gameover("\nUnfortunately you're further in than you realise. The convulsions take over and you gasp a deep breath of custard.")
+							gameover("\nUnfortunately you're further in than you realise. The convulsions take over and you gasp a deep breath of custard. ")
 						else 
-							gameover("\nThe lack of oxygen must have clouded your ability to type clear commands. The custard consumes your lungs, irrevocably")
+							gameover("\nThe lack of oxygen must have clouded your ability to type clear commands. The custard consumes your lungs, irrevocably. ")
 						end
 
 
@@ -144,8 +148,8 @@ end
 def problem
 	puts "You have 5 seconds to calculate the answer to: "
 	puts "What is 40\% of 7"
-	Time.new
-
+	#countdown timer to be written
+	freedom if gets.chomp == 2.8 else gameover("Graham Norton Crab is unimpressed with your numeracy. He minces you into small pink sticks and eats you as a high-protein snack.")	
 
 end
 
