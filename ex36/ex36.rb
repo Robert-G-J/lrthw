@@ -7,7 +7,7 @@ end
 =end
 
 
-def intro 
+def intro
 	puts "FEAR AND LOATHING IN SUBURBIA"
 	puts "*" * 50
 	puts "\nYou awake in a cosy double bed in a woodchip-papered, magnolia room. The sun streams in. On the floor your clothes are strewn. There are other clothes you don't recognise. They look like they're made of PVC. Beside the bed is an array of whips and sex toys. Used condoms. Restraints."
@@ -16,7 +16,7 @@ def intro
 	puts "\nYou realise you must escape. Whereever the hell you are."
 	print "> "
 	dungeon_room
-end 
+end
 
 
 
@@ -24,12 +24,12 @@ end
 def dungeon_room
   puts "\nThis bedroom gives you the creeps. It has a single door and various stuffed toys, with a lingering smell of cheap perfume or aftershave. It's hard to tell."
   puts "\nWhat do you wish to do? \n1/. Stay in bed?\n2/. Pull on your clothes and silently try the door?"
-  
+
 #this while loop infinitely forces you to the start unless you enter either a 1 or 2
   while true
   	print "> "
   	choice  = $stdin.gets.chomp
-	
+
 	  if choice == "1"
 	  	puts "\nYou tuck up tight and pray you don't find out what you did with the vial, gag and imposing rubber instruments."
 	  	gameover("Unfortunately, you do.")
@@ -37,10 +37,10 @@ def dungeon_room
 	  	puts "You pull on your clothes like lightening. Shuffle into your beaten trainers. The door is ajar and you open it without it squeeking. Phew."
 	  	corridor
 	  	break
-	  else 
+	  else
 	  	puts "Enter either 1 or 2"
 	  end
-	  
+
 	end
 end
 
@@ -48,8 +48,8 @@ end
 
 #upstairs corridor outside dungeon_room
 def corridor
-	
-	puts "\nYou're on a corridor, that stretches off to both your left and right, turning a corner at both ends. There are no other doors, just a lot of disconcerting 70s artwork on brown wall-paper. The smell of lavender is everywhere."
+
+	puts "\nYou're on a corridor, that stretches off to both your left and right, turning a corner at both ends. There are no other doors, just a lot of disconcerting 70s artwork on brown wall-paper. The smell of lavender is thick in the air."
 	puts "\nDo you turn left or right?"
 	print "> "
 
@@ -63,7 +63,7 @@ def corridor
 	else
 		puts "\nYou clearly want to go back to bed, so go back inside."
 		dungeon_room
-	end 
+	end
 
 end
 
@@ -82,18 +82,18 @@ def stairs_into_custard
 	puts "What do you want to do?"
 	print "> "
 
-	
-		
+
+
 			choice = $stdin.gets.chomp
-		
+
 		 	if choice =~ /swim|Swim|get|in/
 				puts "\nYou wade down into the custard until you're upto your neck. Here goes..."
 				custard_to_jungle
-			
+
 			elsif choice =~ (/go|back|corridor/)
 		 		corridor
 		 	else
-		 		stairs_into_custard		
+		 		stairs_into_custard
 			end
 
 end
@@ -104,8 +104,8 @@ def custard_to_jungle
 	puts "Starting to run out of air you panic."
 	puts "Do you turn back, or risk it and push on?"
 	print "> "
-	
-		
+
+
 		while true
 		choice = $stdin.gets.chomp
 
@@ -113,13 +113,13 @@ def custard_to_jungle
 				puts "\nThings begin to get drastic and you start convulsing."
 				puts "Continue or go back?"
 				decision = $stdin.gets.chomp
-						
+
 						if decision =~ /continue|keep|keep going|push|swim/
 							puts "\nThe risk pays off and you suddenly break the surface of the custard, gasping for air. "
 							jungle
 						elsif decision =~ /go|back|give up/
 							gameover("\nUnfortunately you're further in than you realise. The convulsions take over and you gasp a deep breath of custard. ")
-						else 
+						else
 							gameover("\nThe lack of oxygen must have clouded your ability to type clear commands. The custard consumes your lungs, irrevocably. ")
 						end
 
@@ -129,7 +129,7 @@ def custard_to_jungle
 			else
 				puts "What was that?"
 			end
-		
+
 		end
 
 
@@ -149,7 +149,7 @@ def problem
 	puts "You have 5 seconds to calculate the answer to: "
 	puts "What is 40\% of 7"
 	#countdown timer to be written
-	freedom if gets.chomp == 2.8 else gameover("Graham Norton Crab is unimpressed with your numeracy. He minces you into small pink sticks and eats you as a high-protein snack.")	
+	freedom if gets.chomp == 2.8 else gameover("Graham Norton Crab is unimpressed with your numeracy. He minces you into small pink sticks and eats you as a high-protein snack.")
 
 end
 
@@ -159,8 +159,8 @@ def art_deco_room
 end
 
 def jungle
-	puts "\nThe traffic of insect noice and overwhelming humidity engulf you. The custard is drying to a bizarre, unpleasant paint. "
-	puts "Tree everywhere. Dense vegetation. "
+	puts "\nThe traffic of insect noise and overwhelming humidity engulf you. The custard is drying to a bizarre, unpleasant paint. "
+	puts "Trees everywhere. Dense vegetation. "
 	puts "There's a hint of a trail to the right and a tiny crawlway to your left. Looks like animals might use it. "
 	puts "Left or right?"
 
@@ -173,7 +173,7 @@ def jungle
 		elsif choice =~ /right|Right|r/
 			puts "\nYou walk right"
 			graham_norton_crab
-		else 
+		else
 			puts "Sorry?"
 		end
 
